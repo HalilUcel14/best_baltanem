@@ -27,6 +27,7 @@ This Package - for my person code it usefully in any my project
 
 
 ```dart
+final const = "hello"
 const like = 'sample'.isvalid;
 ```
 
