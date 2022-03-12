@@ -13,13 +13,20 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  device_info: any
+  diacritic: any
+  flutter_lints: any
+  mask_text_input_formatter: any
+  mime: any
+  package_info_plus: any
+  share: any
+  url_launcher: any
   
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^1.0.0
-
+  
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
