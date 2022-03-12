@@ -11,12 +11,12 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/developing-packages). 
 -->
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+TODO: This packages my often use tools in project and very easy to create public structures
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+TODO: uniy price converter for String, Your Screen's size and other controller screen
+    
 
 ## Getting started
 
@@ -27,7 +27,7 @@ This Package - for my person code it usefully in any my project
 
 
 ```dart
-const like = 'sample';
+const like = 'sample'.isvalid;
 ```
 
 ## Additional information
