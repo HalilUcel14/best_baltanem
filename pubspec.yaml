@@ -13,14 +13,16 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  device_info: any
-  diacritic: any
-  flutter_lints: any
-  mask_text_input_formatter: any
-  mime: any
-  package_info_plus: any
-  share: any
-  url_launcher: any
+  # devices info 
+  device_info: ^2.0.3
+  package_info_plus: ^1.4.0
+  
+  flutter_lints: ^1.0.4
+  mask_text_input_formatter: ^2.1.0
+  mime: ^1.0.1
+  
+  share: ^2.0.4
+  url_launcher: ^6.0.20
   
 
 dev_dependencies:
