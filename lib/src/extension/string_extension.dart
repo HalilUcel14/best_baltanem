@@ -1,7 +1,14 @@
+import 'dart:io';
+
+import 'package:best_baltanem/src/constant/input_formatter_constants.dart';
+import 'package:best_baltanem/src/utility/device_utility.dart';
 import 'package:flutter/material.dart';
+import 'package:share/share.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import '../constant/app_constants.dart';
 import '../constant/regexp_constants.dart';
+import '../exception/package_info_exception.dart';
 
 extension StringExtension on String {
   String get tlMoney => "$this TL";
@@ -46,17 +53,89 @@ extension LaunchExtension on String {
     Brightness? statusBarBrightness,
     String? webOnlyWindowName,
   }) =>
-      launch(
-        this,
-        forceSafariVC: forceSafariVC,
-        forceWebView: forceWebView,
-        enableDomStorage: enableDomStorage,
-        enableJavaScript: enableJavaScript,
-        universalLinksOnly: universalLinksOnly,
-        headers:  headers,
-        statusBarBrightness:  statusBarBrightness,
-        webOnlyWindowName: webOnlyWindowName
-      );
+      launch(this,
+          forceSafariVC: forceSafariVC,
+          forceWebView: forceWebView,
+          enableDomStorage: enableDomStorage,
+          enableJavaScript: enableJavaScript,
+          universalLinksOnly: universalLinksOnly,
+          headers: headers,
+          statusBarBrightness: statusBarBrightness,
+          webOnlyWindowName: webOnlyWindowName);
+}
+
+extension ShareText on String {
+  Future<void> shareWhatsApp() async {
+    try {
+      final isLaunch =
+          await launch('${BaltanemPackConstants.WHATS_APP_PREFIX}$this');
+      if (!isLaunch) await share();
+    } catch (e) {
+      await share();
+    }
+  }
+
+  //
+  Future<void> shareMail(String title) async {
+    final value = DeviceUtility.instance.shareMailText(title, this);
+    final isLaunch = await launch(Uri.encodeFull(value));
+    if (!isLaunch) await value.share();
+  }
+
+  //
+  Future<void> share() async {
+    if (Platform.isIOS) {
+      final isAppIpad = await DeviceUtility.instance.isIpad();
+      if (isAppIpad) {
+        await Share.share(this,
+            sharePositionOrigin: DeviceUtility.instance.ipadPaddingBottum);
+      }
+    }
+    await Share.share(this);
+  }
+}
+
+extension FormatterExtension on String {
+  String get phoneFormatValue =>
+      InputFormatter.instance.phoneFormatter.unmaskText(this);
+  String get timeFormatValue =>
+      InputFormatter.instance.timeFormatter.unmaskText(this);
+  String get timeUnderLineFormatValue =>
+      InputFormatter.instance.timeFormatterUnderLine.unmaskText(this);
+}
+
+extension PackageInfoExtension on String {
+  String get appName {
+    if (DeviceUtility.instance.packageInfo == null) {
+      throw PackageInfoNotFound();
+    } else {
+      return DeviceUtility.instance.packageInfo!.appName;
+    }
+  }
+}
+
+String get packageName {
+  if (DeviceUtility.instance.packageInfo == null) {
+    throw PackageInfoNotFound();
+  } else {
+    return DeviceUtility.instance.packageInfo!.packageName;
+  }
+}
+
+String get version {
+  if (DeviceUtility.instance.packageInfo == null) {
+    throw PackageInfoNotFound();
+  } else {
+    return DeviceUtility.instance.packageInfo!.version;
+  }
+}
+
+String get buildNumber {
+  if (DeviceUtility.instance.packageInfo == null) {
+    throw PackageInfoNotFound();
+  } else {
+    return DeviceUtility.instance.packageInfo!.buildNumber;
+  }
 }
 
 extension StringPathValidator on String {
@@ -64,3 +143,13 @@ extension StringPathValidator on String {
   String svgPath(String path) => "$path/$this.svg";
   String jpgPath(String path) => "$path/$this.jpg";
 }
+
+extension NetworkImageExtension on String {
+  String get randomImage => 'https://picsum.photos/200/300';
+  String get randomSquareImage => 'https://picsum.photos/200';
+  String randomBigSquareImage(int value) => 'https://picsum.photos/$value';
+
+  String get customProfileImage => 'https://www.gravatar.com/avatar/?d=mp';
+  String get customHighProfileImage => 'https://www.gravatar.com/avatar/?d=mp&s=200';
+}
+
