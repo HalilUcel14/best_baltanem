@@ -68,7 +68,7 @@ extension ShareText on String {
   Future<void> shareWhatsApp() async {
     try {
       final isLaunch =
-          await launch('${BaltanemPackConstants.WHATS_APP_PREFIX}$this');
+          await launch('${BaltanemPackConstants.whatsAppPrefix}$this');
       if (!isLaunch) await share();
     } catch (e) {
       await share();
@@ -150,6 +150,6 @@ extension NetworkImageExtension on String {
   String randomBigSquareImage(int value) => 'https://picsum.photos/$value';
 
   String get customProfileImage => 'https://www.gravatar.com/avatar/?d=mp';
-  String get customHighProfileImage => 'https://www.gravatar.com/avatar/?d=mp&s=200';
+  String get customHighProfileImage =>
+      'https://www.gravatar.com/avatar/?d=mp&s=200';
 }
-
