@@ -1,9 +1,9 @@
 class ResponsivityConstants {
   static ResponsivityConstants? _instance;
 
-  static ResponsivityConstants? get instance {
+  static ResponsivityConstants get instance {
     _instance ??= ResponsivityConstants._init();
-    return _instance;
+    return _instance!;
   }
 
   ResponsivityConstants._init();
