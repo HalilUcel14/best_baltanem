@@ -13,6 +13,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  #-#-#-# Kartal packages
   device_info: any
   diacritic: any
   flutter_lints: any
@@ -21,6 +22,7 @@ dependencies:
   package_info_plus: any
   share: any
   url_launcher: any
+  #-#-#-#
   
 
 dev_dependencies:
