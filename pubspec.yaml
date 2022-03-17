@@ -14,14 +14,14 @@ dependencies:
   flutter:
     sdk: flutter
   #-#-#-# Kartal packages
-  device_info: any
-  diacritic: any
-  flutter_lints: any
-  mask_text_input_formatter: any
-  mime: any
-  package_info_plus: any
-  share: any
-  url_launcher: any
+  device_info: ^2.0.0
+  diacritic: ^0.1.3
+  flutter_lints: ^1.0.4
+  mask_text_input_formatter: ^2.0.0
+  mime: ^1.0.0
+  package_info_plus: ^1.4.0
+  share: ^2.0.0
+  url_launcher: ^6.0.1
   #-#-#-#
   
 
