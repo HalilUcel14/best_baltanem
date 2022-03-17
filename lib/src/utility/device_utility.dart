@@ -25,7 +25,7 @@ class DeviceUtility {
     iosDeviceInfo = await deviceInfoPlugin.iosInfo;
     return iosDeviceInfo.name
         .toLowerCase()
-        .contains(BaltanemPackConstants.IPAD_TYPE);
+        .contains(BaltanemPackConstants.ipadType);
   }
 
   String shareMailText(String title, String body) {

@@ -1,12 +1,16 @@
-// import 'package:flutter/cupertino.dart';
+import 'package:flutter/cupertino.dart';
 
-// extension FutureExtension on Future{
-//   Widget toBuild<T>(
-//     {required Widget Function(T? data) onSuccess,
-//     required Widget loadingWidget,
-//     required Widget notFoundWidget,
-//     required Widget onError,
-//     dynamic data}) {
-
-//     }
-// }
+extension FutureExtension on Future {
+  Widget toBuild<T>(
+      {required Widget Function(T? data) onSuccess,
+      required Widget loadingWidget,
+      required Widget notFoundWidget,
+      required Widget onError,
+      dynamic data}) {
+    return FutureBuilder<T>(
+      future: this as Future<T>?,
+      initialData: data,
+      builder: (BuildContext context, AsyncSnapshot<T> snapshot) {},
+    );
+  }
+}
