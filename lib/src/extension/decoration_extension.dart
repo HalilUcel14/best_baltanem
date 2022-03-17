@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'context_extension.dart';
-
 extension InputDecorationExtension on InputDecoration {
   static const kTextColor = Color(0xFF757575);
   InputDecoration myInputDecoration({double? value}) {
