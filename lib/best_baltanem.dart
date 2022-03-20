@@ -23,6 +23,7 @@ export 'src/extension/future_extension.dart';
 export 'src/extension/list_extension.dart';
 export 'src/extension/widget_extension.dart';
 export 'src/extension/decoration_extension.dart';
+export 'src/theme/text_theme.dart';
 
 
 // /// A Calculator.

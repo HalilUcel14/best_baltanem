@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:best_baltanem/best_baltanem.dart';
 import 'package:best_baltanem/src/constant/responsivity_constants.dart';
 import 'package:best_baltanem/src/utility/page_animation/slider_route.dart';
 import 'package:best_baltanem/src/widget/space_sized_height_box.dart';
@@ -10,7 +11,7 @@ import 'int_extension.dart';
 
 extension ContextExtension on BuildContext {
   ThemeData get theme => Theme.of(this);
-  TextTheme get textTheme => theme.textTheme;
+  TextTheme get textTheme => MyTextTheme.instance.theme();
   TextTheme get primaryTextTheme => theme.primaryTextTheme;
   ColorScheme get colorSheme => theme.colorScheme;
 }
