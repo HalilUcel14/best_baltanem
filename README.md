@@ -1,38 +1,41 @@
-<!-- 
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# Baltanem Paketi
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages). 
-
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages). 
--->
-
-TODO: This packages my often use tools in project and very easy to create public structures
-
-## Features
-
-TODO: uniy price converter for String, Your Screen's size and other controller screen
-    
-
-## Getting started
-
-This Package - for my person code it usefully in any my project
-
-## Usage
-
-
+### Dynamic Text Widget in FittedBox
+Ne İşe Yarar: Dinamik olarak boyutlanır ve belirli bir sınır içerisinde şekillenir.
 
 ```dart
-final const = "hello"
-const like = 'sample'.isvalid;
+class TestWidget extends StatelessWidget {
+  const TestWidget({Key? key}) : super(key: key);
+  @override
+  Widget build(BuildContext context) {
+    return DynamicText(
+      text: "Hello",
+      fontSize: 0.05,
+      colors: Colors.black,
+    );
+  }
+}
 ```
 
-## Additional information
 
-TODO: Tell users more about the package: where to find more information, how to 
-contribute to the package, how to file issues, what response they can expect 
-from the package authors, and more.
+### Dikey veya Yatay Oranlı Dinamik Sizedbox
+Ne İşe Yarar: 0 ile 1 arasında verilecek yüzdesel oran ile Ekran içerisinde alan kaplayacak bir widget oluşturmanızı sağlar
+
+```dart
+class TestWidget extends StatelessWidget {
+  const TestWidget({Key? key}) : super(key: key);
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children:  [
+          Text("Hello"),
+          SpaceSizedHeightBox(0.2), // %20 oranlı yüksek widget
+          Text("Hello"),
+      ]
+    );
+  }
+}
+```
+
+
+

@@ -20,12 +20,14 @@ class DynamicText extends StatelessWidget {
   Widget build(BuildContext context) {
     Color kTextColor = const Color(0xFF757575);
     String defaultFontFamily = "Muli";
-    return Text(
-      text,
-      style: TextStyle(
-        color: colors ?? kTextColor,
-        fontFamily: fontFamily ?? defaultFontFamily,
-        fontSize: context.dynamicHeight(fontSize ?? context.heightS),
+    return FittedBox(
+      child: Text(
+        text,
+        style: TextStyle(
+          color: colors ?? kTextColor,
+          fontFamily: fontFamily ?? defaultFontFamily,
+          fontSize: context.dynamicHeight(fontSize ?? context.heightS),
+        ),
       ),
     );
   }
