@@ -37,5 +37,38 @@ class TestWidget extends StatelessWidget {
 }
 ```
 
+### Rastgele Color Değerleri
+Ne İşe Yarar: 17 Renk Paleti arasında rastgele bir Renk getirir.
 
+```dart
+class TestWidget extends StatelessWidget {
+  const TestWidget({Key? key}) : super(key: key);
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children:  [
+          Text("Hello",
+          style: TextStyle(color: context.randomColor),
+          ),
+      ]
+    );
+  }
+}
+```
 
+### Rastgele Resim (İnternetten)
+Ne İşe Yarar: Random image sitesi api ile rastgele resim getirir. Ölçüleri (300x200)
+
+```dart
+class TestWidget extends StatelessWidget {
+  const TestWidget({Key? key}) : super(key: key);
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children:  [
+          Image.network("".randomImage),
+      ]
+    );
+  }
+}
+```

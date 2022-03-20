@@ -13,6 +13,7 @@ export 'src/utility/page_animation/slider_route.dart';
 //
 export 'src/widget/space_sized_height_box.dart';
 export 'src/widget/space_sized_widht_box.dart';
+export 'src/widget/dynamic_text.dart';
 //
 export 'src/extension/context_extension.dart';
 export 'src/extension/image_extension.dart';
