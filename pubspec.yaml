@@ -1,6 +1,6 @@
 name: best_baltanem
 description: Flutter best_practices bal_tanem
-version: 0.0.8
+version: 0.0.9
 homepage: https://github.com/HalilUcel14/best_baltanem
 # author: Halil Ucel <hucelsoft@gmail.com> <https://www.youtube.com/channel/UC4GTOIiDWEe6jIuXlqSIhQg>
 # author: Halil Ücel
@@ -23,7 +23,9 @@ dependencies:
   share: ^2.0.0
   url_launcher: ^6.0.1
   #-#-#-#
-  
+
+  # animation
+  animations: ^2.0.2
 
 dev_dependencies:
   flutter_test:

@@ -72,3 +72,16 @@ class TestWidget extends StatelessWidget {
   }
 }
 ```
+
+### Animation Onboard
+Ne İşe Yarar: Animasyonlu Onboard Kullanımı 
+
+```dart
+class TestWidget extends StatelessWidget {
+  const TestWidget({Key? key}) : super(key: key);
+  @override
+  Widget build(BuildContext context) {
+    return AnimatedOnboardScreen();
+  }
+}
+```
