@@ -44,13 +44,9 @@ class _AnimatedOnboardScreenState extends State<AnimatedOnboardScreen>
   }
 
   void animationForward() async {
-    if (controller.status != AnimationStatus.completed) {
-      await controller.forward();
-    }
-    if (controller.status == AnimationStatus.completed) {
-      await controller.reverse();
-      Navigator.pushNamed(context, widget.routeName);
-    }
+    await controller.forward();
+    await controller.reverse();
+    await Navigator.pushNamed(context, widget.routeName);
   }
 
   @override

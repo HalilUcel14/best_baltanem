@@ -74,14 +74,21 @@ class TestWidget extends StatelessWidget {
 ```
 
 ### Animation Onboard
-Ne İşe Yarar: Animasyonlu Onboard Kullanımı 
+Ne İşe Yarar: Animasyonlu Onboard Kullanımı Ekranda x saniye animasyon oynattıktan sonra İlgili Sayfaya Geçiş Yapar.
 
 ```dart
 class TestWidget extends StatelessWidget {
   const TestWidget({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return AnimatedOnboardScreen();
+    return AnimatedOnboardScreen(
+      routeName: "routeName",
+      duration: const Duration(seconds: 2),
+      child: Icon(
+        Icons.home,
+        size: 500,
+      ),
+    );
   }
 }
 ```

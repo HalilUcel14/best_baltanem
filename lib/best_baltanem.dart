@@ -10,7 +10,7 @@ export 'src/exception/package_info_exception.dart';
 //
 export 'src/utility/device_utility.dart';
 export 'src/utility/page_animation/slider_route.dart';
-//
+// Widgets
 export 'src/widget/space_sized_height_box.dart';
 export 'src/widget/space_sized_widht_box.dart';
 export 'src/widget/dynamic_text.dart';
