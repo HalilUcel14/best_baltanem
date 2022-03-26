@@ -5,8 +5,9 @@ export 'src/constant/file_constants.dart';
 export 'src/constant/input_formatter_constants.dart';
 export 'src/constant/regexp_constants.dart';
 export 'src/constant/responsivity_constants.dart';
-//
+// Error Exception
 export 'src/exception/package_info_exception.dart';
+export 'src/exception/error_widget_builder.dart';
 //
 export 'src/utility/device_utility.dart';
 export 'src/utility/page_animation/slider_route.dart';
