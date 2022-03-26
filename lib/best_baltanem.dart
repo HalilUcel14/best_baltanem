@@ -21,6 +21,10 @@ export 'src/base_widget/base_statefull.dart';
 export 'src/base_widget/base_view.dart';
 export 'src/base_widget/base_view_model.dart';
 //
+export 'src/init/navigation/i_navigation_manager.dart';
+export 'src/init/navigation/navigation_router.dart';
+export 'src/init/navigation/navigation_service.dart';
+//
 export 'src/extension/context_extension.dart';
 export 'src/extension/image_extension.dart';
 export 'src/extension/int_extension.dart';
