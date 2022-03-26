@@ -1,13 +1,7 @@
 import 'dart:io';
 
 import 'package:best_baltanem/best_baltanem.dart';
-import 'package:best_baltanem/src/constant/responsivity_constants.dart';
-import 'package:best_baltanem/src/utility/page_animation/slider_route.dart';
-import 'package:best_baltanem/src/widget/space_sized_height_box.dart';
-import 'package:best_baltanem/src/widget/space_sized_widht_box.dart';
 import 'package:flutter/material.dart';
-
-import 'int_extension.dart';
 
 extension ContextExtension on BuildContext {
   ThemeData get theme => Theme.of(this);
@@ -159,6 +153,7 @@ extension NavigationExtension on BuildContext {
 
   Future<T?> pop<T>([T? data]) async {
     await navigation.maybePop(data);
+    return null;
   }
 
   Future<T?> navigateName<T>(String path, {Object? data}) async {
