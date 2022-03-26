@@ -16,6 +16,8 @@ export 'src/widget/space_sized_widht_box.dart';
 export 'src/widget/dynamic_text.dart';
 export 'src/widget/animation_onboard.dart';
 // Base Widgets
+export 'src/base_widget/base_statefull.dart';
+export 'src/base_widget/base_view.dart';
 export 'src/base_widget/base_view_model.dart';
 //
 export 'src/extension/context_extension.dart';
