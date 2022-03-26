@@ -1,4 +1,4 @@
 class BaltanemPackConstants {
-  static const String IPAD_TYPE = "ipad";
-  static const String WHATS_APP_PREFIX = 'whatsapp://send?text=';
+  static const String ipadType = "ipad";
+  static const String whatsAppPrefix = 'whatsapp://send?text=';
 }

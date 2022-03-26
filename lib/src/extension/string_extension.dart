@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:best_baltanem/best_baltanem.dart';
 import 'package:best_baltanem/src/constant/input_formatter_constants.dart';
 import 'package:best_baltanem/src/utility/device_utility.dart';
 import 'package:flutter/material.dart';
@@ -16,6 +17,11 @@ extension StringExtension on String {
   String get euroMoney => "$this EUR";
   String get chfMoney => "$this CHF";
   String get poundMoney => "$this £";
+}
+
+extension DefaultAssets on String {
+  String get defaultIcons => "assets/icons/hu_$this.svg";
+  String get defaultImage => "assets/images/hu_$this.png";
 }
 
 extension StringColorExtension on String {
@@ -68,7 +74,7 @@ extension ShareText on String {
   Future<void> shareWhatsApp() async {
     try {
       final isLaunch =
-          await launch('${BaltanemPackConstants.WHATS_APP_PREFIX}$this');
+          await launch('${BaltanemPackConstants.whatsAppPrefix}$this');
       if (!isLaunch) await share();
     } catch (e) {
       await share();
@@ -150,6 +156,6 @@ extension NetworkImageExtension on String {
   String randomBigSquareImage(int value) => 'https://picsum.photos/$value';
 
   String get customProfileImage => 'https://www.gravatar.com/avatar/?d=mp';
-  String get customHighProfileImage => 'https://www.gravatar.com/avatar/?d=mp&s=200';
+  String get customHighProfileImage =>
+      'https://www.gravatar.com/avatar/?d=mp&s=200';
 }
-
