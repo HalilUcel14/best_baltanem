@@ -26,12 +26,15 @@ dependencies:
 
   # animation
   animations: ^2.0.2
- 
-
+  #
+  # image management
+  flutter_svg: ^1.0.3
+  #
   # state management
   provider: ^6.0.2
   mobx: ^2.0.6+1
   mobx_codegen: ^2.0.5+2
+  #
 
 
 dev_dependencies:
