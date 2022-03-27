@@ -21,7 +21,7 @@ class BaseView<T extends Store> extends StatefulWidget {
   _BaseViewState createState() => _BaseViewState();
 }
 
-class _BaseViewState extends BaseStateful<BaseView> {
+class _BaseViewState extends BaseState<BaseView> {
   @override
   void initState() {
     super.initState();

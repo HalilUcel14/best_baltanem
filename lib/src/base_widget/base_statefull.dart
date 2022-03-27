@@ -1,9 +1,7 @@
+import 'package:best_baltanem/best_baltanem.dart';
 import 'package:flutter/material.dart';
 
-abstract class BaseStateful<T extends StatefulWidget> extends State<T> {
-  ThemeData get themeData => Theme.of(context);
-  double dynamicHeight(double value) =>
-      MediaQuery.of(context).size.height * value;
-  double dynamicWidth(double value) =>
-      MediaQuery.of(context).size.width * value;
+abstract class BaseState<T extends StatefulWidget> extends State<T> {
+  double dynamicHeight(double value) => context.dynamicHeight(value);
+  double dynamicWidth(double value) => context.dynamicWidth(value);
 }
