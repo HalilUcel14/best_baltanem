@@ -23,9 +23,9 @@ class BaseView<T extends Store> extends StatefulWidget {
 
 class _BaseViewState extends BaseStateful<BaseView> {
   @override
-  void initState() async{
+  void initState() {
     super.initState();
-     widget.onModelReady != null ? widget.onModelReady!(widget.viewModel) : null;
+    widget.onModelReady != null ? widget.onModelReady!(widget.viewModel) : null;
     //widget.onModelReady ?? widget.onModelReady!(widget.viewModel);
   }
 

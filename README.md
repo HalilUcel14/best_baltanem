@@ -6,7 +6,22 @@
 
 ## Linkedin : https://www.linkedin.com/in/halilucel/
 
-### Base View  Widget in FittedBox
+### Random Color Container  Widget 
+Ne İşe Yarar: Tüm View Modelleri tek bir üst sınıftan alarak ortaklaştırmaya ve bazı özelliklerin zorunlu kılınmasına yardımcı olacak.
+
+```dart
+return Scaffold(
+      body: Column(
+        children: const [
+          Expanded(flex: 5, child: RandomColorContainer()),
+          Expanded(flex: 3, child: RandomColorContainer()),
+          Expanded(flex: 2, child: RandomColorContainer()),
+        ],
+      ),
+    );
+```
+
+### Base View  Widget
 Ne İşe Yarar: Tüm View Modelleri tek bir üst sınıftan alarak ortaklaştırmaya ve bazı özelliklerin zorunlu kılınmasına yardımcı olacak.
 
 ```dart
@@ -32,7 +47,7 @@ class OnBoardView extends StatelessWidget {
 ```
 
 
-### Base View Model Widget in FittedBox
+### Base View Model Widget
 Ne İşe Yarar: Tüm View Modelleri tek bir üst sınıftan alarak ortaklaştırmaya ve bazı özelliklerin zorunlu kılınmasına yardımcı olacak.
 
 ```dart
