@@ -30,6 +30,9 @@ dependencies:
   # image management
   flutter_svg: ^1.0.3
   #
+  # Locale management
+  shared_preferences: ^2.0.13
+  #
   # state management
   provider: ^6.0.2
   mobx: ^2.0.6+1
