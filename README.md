@@ -1,5 +1,57 @@
 # Baltanem Paketi
 
+## youtube : https://www.youtube.com/channel/UC4GTOIiDWEe6jIuXlqSIhQg,
+
+## Github : https://github.com/HalilUcel14
+
+## Linkedin : https://www.linkedin.com/in/halilucel/
+
+### Base View  Widget in FittedBox
+Ne İşe Yarar: Tüm View Modelleri tek bir üst sınıftan alarak ortaklaştırmaya ve bazı özelliklerin zorunlu kılınmasına yardımcı olacak.
+
+```dart
+import 'package:flutter/material.dart';
+
+import '../../core/baseview/base_view.dart';
+import '../viewmodel/onboard_viewmodel.dart';
+
+class OnBoardView extends StatelessWidget {
+  const OnBoardView({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return BaseView<OnBoardViewModel>(
+      viewModel: OnBoardViewModel(),
+      onModelReady: (model) {
+        model.setContext(context);
+      },
+      onPageBuilder: (BuildContext context,OnBoardViewModel value) => Scaffold(),
+    );
+  }
+}
+```
+
+
+### Base View Model Widget in FittedBox
+Ne İşe Yarar: Tüm View Modelleri tek bir üst sınıftan alarak ortaklaştırmaya ve bazı özelliklerin zorunlu kılınmasına yardımcı olacak.
+
+```dart
+import 'package:flutter/cupertino.dart';
+import 'package:mobx/mobx.dart';
+
+import '../../core/baseviewmodel/base_view_model.dart';
+part 'onboard_viewmodel.g.dart';
+
+class OnBoardViewModel = _OnBoardViewModelBase with _$OnBoardViewModel;
+
+abstract class _OnBoardViewModelBase with Store, BaseViewModel {
+  @override
+  void setContext(BuildContext context) => this.context = context;
+  @override
+  void init() {}
+}
+```
+
 ### Dynamic Text Widget in FittedBox
 Ne İşe Yarar: Dinamik olarak boyutlanır ve belirli bir sınır içerisinde şekillenir.
 
