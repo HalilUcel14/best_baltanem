@@ -32,6 +32,7 @@ class ErrorMaterialWidget extends StatelessWidget {
                 fontWeight: FontWeight.bold,
                 color: Colors.white,
               ),
+              textAlign: TextAlign.center,
             ),
           ],
         ),
