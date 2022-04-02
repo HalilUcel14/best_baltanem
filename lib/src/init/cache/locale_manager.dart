@@ -1,9 +1,10 @@
 import 'package:shared_preferences/shared_preferences.dart';
 
 // import '../../constants/enums/locale_keys_enum.dart';
+//
 enum PreferencesKeys {
   TOKEN,
-  IS_FIRST_APP,
+  ONBOARD,
 }
 
 class LocaleManager {
@@ -28,23 +29,41 @@ class LocaleManager {
   Future<void> clearAllSaveFirst() async {
     if (_preferences != null) {
       await _preferences!.clear();
-      await setBoolValue(PreferencesKeys.IS_FIRST_APP, true);
+      await setBoolValue(PreferencesKeys.ONBOARD.toString(), true);
     }
   }
 
   // Setter Functions
-  Future<void> setStringValue(PreferencesKeys key, String value) async {
-    await _preferences!.setString(key.toString(), value);
+  Future<void> setStringValue(String key, String value) async {
+    await _preferences!.setString(key, value);
   }
 
-  Future<void> setBoolValue(PreferencesKeys key, bool value) async {
-    await _preferences!.setBool(key.toString(), value);
+  Future<void> setBoolValue(String key, bool value) async {
+    await _preferences!.setBool(key, value);
+  }
+
+  Future<void> setIntValue(String key, int value) async {
+    await _preferences!.setInt(key, value);
+  }
+
+  Future<void> setDoubleValue(String key, double value) async {
+    await _preferences!.setDouble(key, value);
+  }
+
+  Future<void> setListStringValue(String key, List<String> value) async {
+    await _preferences!.setStringList(key, value);
   }
 
   // Getter Functions
-  String getStringPreferences(PreferencesKeys key) =>
-      _preferences?.getString(key.toString()) ?? "";
+  String getStringPreferences(String key) => _preferences?.getString(key) ?? "";
 
-  bool getBoolPreferences(PreferencesKeys key) =>
-      _preferences?.getBool(key.toString()) ?? false;
+  bool getBoolPreferences(String key) => _preferences?.getBool(key) ?? false;
+
+  int getIntPreferences(String key) => _preferences?.getInt(key) ?? 0;
+
+  double getDoublePreferences(String key) =>
+      _preferences?.getDouble(key) ?? 0.00;
+
+  List<String> getListStringPreferences(String key) =>
+      _preferences?.getStringList(key) ?? [];
 }

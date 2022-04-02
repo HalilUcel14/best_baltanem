@@ -36,12 +36,14 @@ dependencies:
   # state management
   provider: ^6.0.2
   mobx: ^2.0.6+1
-  mobx_codegen: ^2.0.5+2
+  flutter_mobx: ^2.0.4
+
   #
 
 
 dev_dependencies:
   build_runner: ^2.1.8
+  mobx_codegen: ^2.0.5+2
   flutter_test:
     sdk: flutter
   
