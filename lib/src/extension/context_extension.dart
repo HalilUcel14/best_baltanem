@@ -1,7 +1,8 @@
 import 'dart:io';
 
-import 'package:best_baltanem/best_baltanem.dart';
 import 'package:flutter/material.dart';
+
+import '../../best_baltanem.dart';
 
 extension ContextExtension on BuildContext {
   ThemeData get theme => Theme.of(this);

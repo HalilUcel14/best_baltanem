@@ -1,8 +1,11 @@
+import 'package:best_baltanem/src/screen/onboard_screen/view/body/components/onboard_text.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../best_baltanem.dart';
 import '../../viewmodel/onboard_viewmodel.dart';
+import 'components/onboard_floating_button.dart';
 import 'components/onboard_image.dart';
+import 'components/onboard_page_indicator.dart';
 
 class OnBoardBodyView extends StatelessWidget {
   final OnBoardViewModel viewModel;
@@ -42,8 +45,8 @@ class OnBoardBodyView extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             OnBoardBodyImage(model: viewModel.onBoardItems[index]),
-            const Spacer()
-            
+            const Spacer(),
+            OnBoardBodyText(model: viewModel.onBoardItems[index]),
           ],
         );
       },
@@ -57,7 +60,13 @@ class OnBoardBodyView extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.center,
-      children: const [],
+      children: [
+        OnBoardPageIndicator(modelValue: viewModel),
+        OnBoardFloatingButton(
+          imgPath: "assets/images/button/right_arrow_2.svg",
+          viewModel: viewModel,
+        ),
+      ],
     );
   }
 }

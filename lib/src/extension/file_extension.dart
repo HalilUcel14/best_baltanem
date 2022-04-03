@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'package:best_baltanem/src/constant/file_constants.dart';
+import '../constant/file_constants.dart';
 import 'package:mime/mime.dart';
 
 enum FileType { image, video, audio, text, unknown }

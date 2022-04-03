@@ -1,7 +1,8 @@
-import 'package:best_baltanem/src/constant/app_constants.dart';
 import 'package:device_info/device_info.dart';
 import 'package:flutter/material.dart';
 import 'package:package_info_plus/package_info_plus.dart';
+
+import '../constant/app_constants.dart';
 
 class DeviceUtility {
   static DeviceUtility? _instace;

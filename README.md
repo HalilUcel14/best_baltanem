@@ -1,10 +1,54 @@
-# Baltanem Paketi
+# Baltanem Paketi 
+
+## mail address : hucelsoft@gmail.com
 
 ## youtube : https://www.youtube.com/channel/UC4GTOIiDWEe6jIuXlqSIhQg,
 
 ## Github : https://github.com/HalilUcel14
 
 ## Linkedin : https://www.linkedin.com/in/halilucel/
+
+### OnBoard Screen Best Practices with Mobx
+Ne İşe Yarar: Tüm View Modelleri tek bir üst sınıftan alarak ortaklaştırmaya ve bazı özelliklerin zorunlu kılınmasına yardımcı olacak.
+
+```dart
+class OnBoardTest extends StatelessWidget {
+  const OnBoardTest({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return OnBoardView(
+      onBoardItems: defaultTestOnBoardList,
+      navigatePushName: "Home",
+    );
+  }
+}
+
+const List<String> defaultImage = <String>[
+  "assets/images/onboard/hu_onboard_1.png",
+  "assets/images/onboard/hu_onboard_2.png",
+  "assets/images/onboard/hu_onboard_3.png"
+];
+
+List<OnBoardModel> defaultTestOnBoardList = [
+  OnBoardModel(
+    title: "TOKOTO",
+    description: "Welcome to Tokoto, Let's Shop!",
+    imagePath: defaultImage[0],
+  ),
+  OnBoardModel(
+    title: "TOKOTO",
+    description:
+        "We help people connect with store around United State of America",
+    imagePath: defaultImage[1],
+  ),
+  OnBoardModel(
+    title: "TOKOTO",
+    description: "We show the easy way to shop. Just stay at home with us",
+    imagePath: defaultImage[2],
+  ),
+];
+```
 
 ### Random Color Container  Widget 
 Ne İşe Yarar: Tüm View Modelleri tek bir üst sınıftan alarak ortaklaştırmaya ve bazı özelliklerin zorunlu kılınmasına yardımcı olacak.

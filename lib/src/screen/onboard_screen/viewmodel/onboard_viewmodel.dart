@@ -10,6 +10,7 @@ class OnBoardViewModel = _OnBoardViewModelBase with _$OnBoardViewModel;
 
 abstract class _OnBoardViewModelBase with Store, BaseViewModel {
   List<OnBoardModel> onBoardItems = [];
+  late String pushName;
   //
   @observable
   int currentPage = 0;
@@ -20,6 +21,12 @@ abstract class _OnBoardViewModelBase with Store, BaseViewModel {
   }
 
   //
+  @action
+  void setPushName(String name) {
+    pushName = name;
+  }
+  //
+  @action
   void onBoardListed({List<OnBoardModel>? onboardListed}) {
     if (onboardListed.isNullorEmpty) {
       onBoardItems = defaultOnBoardList;

@@ -1,8 +1,8 @@
 import 'dart:io';
 
-import 'package:best_baltanem/best_baltanem.dart';
-import 'package:best_baltanem/src/constant/input_formatter_constants.dart';
-import 'package:best_baltanem/src/utility/device_utility.dart';
+import '../../best_baltanem.dart';
+import '../constant/input_formatter_constants.dart';
+import '../utility/device_utility.dart';
 import 'package:flutter/material.dart';
 import 'package:share/share.dart';
 import 'package:url_launcher/url_launcher.dart';
