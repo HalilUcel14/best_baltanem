@@ -37,6 +37,7 @@ export 'src/init/navigation/navigation_service.dart';
 export 'src/init/provider/provider_list.dart';
 /////////////////////////////////
 ////////////// Screens ////////
+export 'src/screen/onboard_screen/model/onboard_model.dart';
 export 'src/screen/onboard_screen/view/onboard_view.dart';
 /////////////////////////////////
 ////////////// Theme ////////
