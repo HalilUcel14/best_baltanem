@@ -49,7 +49,9 @@ class DynamicText extends FittedBox {
             style: TextStyle(
               color: mColor ?? kTextColor,
               fontFamily: fontFamily,
-              fontSize: context.dynamicHeight(fontSize ?? context.heightS),
+              fontSize: fontSize != null
+                  ? context.dynamicHeight(fontSize)
+                  : context.heightS,
             ),
           ),
         );
