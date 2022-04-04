@@ -18,7 +18,7 @@ import '../../best_baltanem.dart';
 
 class SpaceSizedWidhtBox extends SizedBox {
   SpaceSizedWidhtBox(
-      {Key? key, required BuildContext context, required double height})
-      : assert(height > 0 && height <= 1),
-        super(key: key, width: context.dynamicWidth(height));
+      {Key? key, required BuildContext context, required double width})
+      : assert(width > 0 && width <= 1),
+        super(key: key, width: context.dynamicWidth(width));
 }

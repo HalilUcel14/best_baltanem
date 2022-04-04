@@ -113,19 +113,31 @@ extension PaddingExtension on BuildContext {
 }
 
 extension SizedBoxExtension on BuildContext {
-  Widget get emptySizedBoxWidthXS => SpaceSizedWidthBox(width: widthXS);
-  Widget get emptySizedBoxWidthS => SpaceSizedWidthBox(width: widthS);
-  Widget get emptySizedBoxWidthM => SpaceSizedWidthBox(width: widthM);
-  Widget get emptySizedBoxWidthL => SpaceSizedWidthBox(width: widthL);
-  Widget get emptySizedBoxWidthXL => SpaceSizedWidthBox(width: widthXL);
-  Widget get emptySizedBoxWidthXXL => SpaceSizedWidthBox(width: widthXXL);
+  Widget get emptySizedBoxWidthXS =>
+      SpaceSizedWidhtBox(context: this, width: widthXS);
+  Widget get emptySizedBoxWidthS =>
+      SpaceSizedWidhtBox(context: this, width: widthS);
+  Widget get emptySizedBoxWidthM =>
+      SpaceSizedWidhtBox(context: this, width: widthM);
+  Widget get emptySizedBoxWidthL =>
+      SpaceSizedWidhtBox(context: this, width: widthL);
+  Widget get emptySizedBoxWidthXL =>
+      SpaceSizedWidhtBox(context: this, width: widthXL);
+  Widget get emptySizedBoxWidthXXL =>
+      SpaceSizedWidhtBox(context: this, width: widthXXL);
   //
-  Widget get emptySizedBoxHeightXS => SpaceSizedHeightBox(height: heightXS);
-  Widget get emptySizedBoxHeightS => SpaceSizedHeightBox(height: heightS);
-  Widget get emptySizedBoxHeightM => SpaceSizedHeightBox(height: heightM);
-  Widget get emptySizedBoxHeightL => SpaceSizedHeightBox(height: heightL);
-  Widget get emptySizedBoxHeightXL => SpaceSizedHeightBox(height: heightXL);
-  Widget get emptySizedBoxHeightXXL => SpaceSizedHeightBox(height: heightXXL);
+  Widget get emptySizedBoxHeightXS =>
+      SpaceSizedHeightBox(context: this, height: heightXS);
+  Widget get emptySizedBoxHeightS =>
+      SpaceSizedHeightBox(context: this, height: heightS);
+  Widget get emptySizedBoxHeightM =>
+      SpaceSizedHeightBox(context: this, height: heightM);
+  Widget get emptySizedBoxHeightL =>
+      SpaceSizedHeightBox(context: this, height: heightL);
+  Widget get emptySizedBoxHeightXL =>
+      SpaceSizedHeightBox(context: this, height: heightXL);
+  Widget get emptySizedBoxHeightXXL =>
+      SpaceSizedHeightBox(context: this, height: heightXXL);
 }
 
 extension RadiusExtension on BuildContext {

@@ -26,7 +26,7 @@ class OnBoardBodyView extends StatelessWidget {
             child: buildPageView(viewModel: viewModel),
             flex: _flexOneWidget,
           ),
-          const SpaceSizedHeightBox(height: 0.05),
+          SpaceSizedHeightBox(context: context, height: 0.05),
           Expanded(
             child: skipAndIndicator(context: context, viewModel: viewModel),
             flex: _flexTwoWidget,
