@@ -36,9 +36,10 @@ export 'src/init/navigation/navigation_router.dart';
 export 'src/init/navigation/navigation_service.dart';
 export 'src/init/provider/provider_list.dart';
 /////////////////////////////////
-////////////// Screens ////////
+////////////// Screens / ONBOARD ////////
 export 'src/screen/onboard_screen/model/onboard_model.dart';
 export 'src/screen/onboard_screen/view/onboard_view.dart';
+export 'src/screen/onboard_screen/viewmodel/onboard_viewmodel.dart';
 /////////////////////////////////
 ////////////// Theme ////////
 export 'src/theme/text_theme.dart';
