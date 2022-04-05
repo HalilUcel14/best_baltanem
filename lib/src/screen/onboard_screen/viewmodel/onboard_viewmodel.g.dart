@@ -39,6 +39,17 @@ mixin _$OnBoardViewModel on _OnBoardViewModelBase, Store {
   }
 
   @override
+  void onBoardListed({List<OnBoardModel>? onboardListed}) {
+    final _$actionInfo = _$_OnBoardViewModelBaseActionController.startAction(
+        name: '_OnBoardViewModelBase.onBoardListed');
+    try {
+      return super.onBoardListed(onboardListed: onboardListed);
+    } finally {
+      _$_OnBoardViewModelBaseActionController.endAction(_$actionInfo);
+    }
+  }
+
+  @override
   String toString() {
     return '''
 currentPage: ${currentPage}

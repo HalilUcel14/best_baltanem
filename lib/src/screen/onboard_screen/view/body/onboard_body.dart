@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../../../best_baltanem.dart';
-import '../../viewmodel/onboard_viewmodel.dart';
+
 import 'components/onboard_floating_button.dart';
 import 'components/onboard_image.dart';
 import 'components/onboard_page_indicator.dart';

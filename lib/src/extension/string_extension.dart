@@ -1,15 +1,10 @@
 import 'dart:io';
 
-import '../../best_baltanem.dart';
-import '../constant/input_formatter_constants.dart';
-import '../utility/device_utility.dart';
 import 'package:flutter/material.dart';
 import 'package:share/share.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import '../constant/app_constants.dart';
-import '../constant/regexp_constants.dart';
-import '../exception/package_info_exception.dart';
+import '../../best_baltanem.dart';
 
 extension StringExtension on String {
   String get tlMoney => "$this TL";
@@ -29,13 +24,13 @@ extension StringColorExtension on String {
 }
 
 extension StringValidator on String {
-  bool get isNullOrEmpty => this == null || this.isEmpty;
+  bool get isNullOrEmpty => isEmpty;
   bool get isNotNullAndNotEmpty => !isNullOrEmpty;
 
-  bool get isValidEmail => this != null
+  bool get isValidEmail => isNotNullAndNotEmpty
       ? RegExp(RegExpConstants.instance.emailRegexp).hasMatch(this)
       : false;
-  bool get isValidPassword => this != null
+  bool get isValidPassword => isNotNullAndNotEmpty
       ? RegExp(RegExpConstants.instance.passwordRegexp).hasMatch(this)
       : false;
 }

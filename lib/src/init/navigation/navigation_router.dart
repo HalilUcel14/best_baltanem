@@ -7,12 +7,12 @@ class NavigationRoute {
   NavigationRoute._init();
 
   //
-  static const String TEST_VIEW = "/test";
+  static const String testView = "/test";
   //
 
   Route<dynamic> myGenerateRoute(RouteSettings args) {
     switch (args.name) {
-      case TEST_VIEW:
+      case testView:
       //  return normalyNavigate(const TestView());
       default:
         return MaterialPageRoute(

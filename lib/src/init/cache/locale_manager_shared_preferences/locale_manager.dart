@@ -3,8 +3,8 @@ import 'package:shared_preferences/shared_preferences.dart';
 // import '../../constants/enums/locale_keys_enum.dart';
 //
 enum PreferencesKeys {
-  TOKEN,
-  ONBOARD,
+  token,
+  onboard,
 }
 
 class LocaleManager {
@@ -29,7 +29,7 @@ class LocaleManager {
   Future<void> clearAllSaveFirst() async {
     if (_preferences != null) {
       await _preferences!.clear();
-      await setBoolValue(PreferencesKeys.ONBOARD.toString(), true);
+      await setBoolValue(PreferencesKeys.onboard.toString(), true);
     }
   }
 

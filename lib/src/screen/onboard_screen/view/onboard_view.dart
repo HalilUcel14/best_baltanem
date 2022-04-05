@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../../best_baltanem.dart';
-import '../viewmodel/onboard_viewmodel.dart';
+
 import 'body/onboard_body.dart';
 
 class OnBoardView extends StatelessWidget {

@@ -30,7 +30,7 @@ abstract class _OnBoardViewModelBase with Store, BaseViewModel {
 
   //
   void completeToOnBoard(String path) async {
-    await localeManager!.setBoolValue(PreferencesKeys.ONBOARD.toString(), true);
+    await localeManager!.setBoolValue(PreferencesKeys.onboard.toString(), true);
     navigationService!.navigateToPage(path: path);
   }
 
