@@ -9,6 +9,7 @@ class OnBoardViewModel = _OnBoardViewModelBase with _$OnBoardViewModel;
 
 abstract class _OnBoardViewModelBase with Store, BaseViewModel {
   List<OnBoardModel> onBoardItems = [];
+  String? pathName = "";
   //
   @observable
   int currentPage = 0;
@@ -18,20 +19,21 @@ abstract class _OnBoardViewModelBase with Store, BaseViewModel {
     currentPage = value;
   }
 
-  //
   @action
-  void onBoardListed({List<OnBoardModel>? onboardListed}) {
-    if (onboardListed.isNullorEmpty) {
-      onBoardItems = defaultOnBoardList;
-    } else {
-      onBoardItems = onboardListed!;
-    }
+  void setPathName(String value) {
+    pathName = value;
   }
 
   //
-  void completeToOnBoard(String path) async {
+  @action
+  void onBoardListed({List<OnBoardModel>? onboardListed}) {
+    onBoardItems = onboardListed!;
+  }
+
+  //
+  void completeToOnBoard() async {
     await localeManager!.setBoolValue(PreferencesKeys.onboard.toString(), true);
-    navigationService!.navigateToPage(path: path);
+    navigationService!.navigateToPage(path: pathName ?? '/');
   }
 
   //

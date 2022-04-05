@@ -39,6 +39,17 @@ mixin _$OnBoardViewModel on _OnBoardViewModelBase, Store {
   }
 
   @override
+  void setPathName(String value) {
+    final _$actionInfo = _$_OnBoardViewModelBaseActionController.startAction(
+        name: '_OnBoardViewModelBase.setPathName');
+    try {
+      return super.setPathName(value);
+    } finally {
+      _$_OnBoardViewModelBaseActionController.endAction(_$actionInfo);
+    }
+  }
+
+  @override
   void onBoardListed({List<OnBoardModel>? onboardListed}) {
     final _$actionInfo = _$_OnBoardViewModelBaseActionController.startAction(
         name: '_OnBoardViewModelBase.onBoardListed');

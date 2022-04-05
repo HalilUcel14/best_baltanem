@@ -6,9 +6,11 @@ import 'body/onboard_body.dart';
 
 class OnBoardView extends StatelessWidget {
   final List<OnBoardModel> onBoardItems;
+  final String pathName;
   const OnBoardView({
     Key? key,
     required this.onBoardItems,
+    required this.pathName,
   }) : super(key: key);
 
   @override
@@ -17,6 +19,7 @@ class OnBoardView extends StatelessWidget {
       viewModel: OnBoardViewModel(),
       onModelReady: (model) {
         model.setContext(context);
+        model.setPathName(pathName);
         model.onBoardListed(onboardListed: onBoardItems);
         model.init();
       },

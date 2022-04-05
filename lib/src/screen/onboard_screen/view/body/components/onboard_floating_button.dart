@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import '../../../../../../best_baltanem.dart';
-import '../../../../../constant/navigation_constants.dart';
 // import '../../../viewmodel/onboard_viewmodel.dart';
 
 class OnBoardFloatingButton extends FloatingActionButton {
@@ -14,7 +13,7 @@ class OnBoardFloatingButton extends FloatingActionButton {
       : super(
           key: key,
           onPressed: () {
-            viewModel.completeToOnBoard(NavigationConstants.onBoard);
+            viewModel.completeToOnBoard();
           },
           backgroundColor: colorString!.color,
           child: Padding(

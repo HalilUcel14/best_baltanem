@@ -41,6 +41,7 @@ class OnBoardPageIndicator extends Expanded {
   }) : super(
           key: key,
           child: ListView.builder(
+            scrollDirection: Axis.horizontal,
             itemCount: viewModel.onBoardItems.length,
             itemBuilder: (context, index) {
               return Observer(builder: (_) {
